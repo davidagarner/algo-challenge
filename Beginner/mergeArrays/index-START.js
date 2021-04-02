@@ -5,17 +5,18 @@
 */
 
 function mergeArrays(...arrays) {
-
     let jointArray = []
-    
     arrays.forEach(array => {
         jointArray = [...jointArray, ...array]
-    });
-
-    return [...new Set([...jointArray])]
-
-    
-}
-
+    })
+    const weridArray = jointArray.reduce((newArray, item) =>{
+        if (newArray.includes(item)){
+            return newArray
+        } else {
+            return [...newArray, item]
+        }
+    }, [])
+    return weridArray
+  }
 
 module.exports = mergeArrays

@@ -6,8 +6,18 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 
 
 function longestWord(text) {
-    // Code goes here
+    let longest = '';
+    text.split(' ').forEach(word => {
+        if (word.length > longest.length)
+            longest = word;
+    })
+    return longest;
 }
+// longestWord()
+// function palindromeChecker(str) {
+//     const reverseStr = str.split('').reverse().join('')
+//     return str === reverseStr
+// }
 
 
 module.exports = longestWord

@@ -7,9 +7,17 @@
 
 
 
-function fizzBuzz(n) {
-    // Code goes here
+function fizzBuzz(n){
+    for(i = 1;i <= n; i++){
+        let arr = []
+       if(i % 3 === 0){
+           arr.push("Fizz") // Code goes here
+}else if(i % 5 === 0){
+    arr.push("Buzz")
+}else if(i % 3 === 0 && n % 5 === 0 ){
+    arr.push("FizzBuzz")
 }
-
+    }
+}
 
 module.exports = fizzBuzz

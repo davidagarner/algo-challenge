@@ -6,9 +6,12 @@ e.g palindromeChecker('racecar') // will return true
 
 
 
-function palindromeChecker(text) {
-    v// Code goes here
+function palindromeChecker(str) {
+    const reverseStr = str.split('').reverse().join('')
+    return str === reverseStr
 }
+
+palindromeChecker("str")
 
 
 

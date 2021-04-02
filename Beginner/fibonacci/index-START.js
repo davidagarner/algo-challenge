@@ -6,7 +6,10 @@ where the sequence is:
 
 
 function fibonacci(n) {
-    // Code goes here
+    let sequence = [0,1];
+    for(i = 2; i <= n+1; i++) {
+        sequence.push(sequence[i-2] + sequence[i-1]);
+    }
+    return sequence[sequence.length-1];
 }
-
 module.exports = fibonacci
